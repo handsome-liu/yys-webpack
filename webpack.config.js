@@ -1,8 +1,10 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const Webpack = require('webpack');
-const outPath = ''; //设置生成路径
+const { path, HtmlWebpackPlugin, ExtractTextPlugin, Webpack, outPath } = {
+    path: require('path'),
+    HtmlWebpackPlugin: require('html-webpack-plugin'),
+    ExtractTextPlugin: require('extract-text-webpack-plugin'),
+    Webpack: require('webpack'),
+    outPath: '' //设置生成路径
+};
 
 module.exports = {
     // 打包模式
@@ -108,5 +110,3 @@ module.exports = {
         hot: true
     }
 };
-
-
