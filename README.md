@@ -20,7 +20,7 @@ webpack.config.js ------ 管理 webpack 的参数设置
 
 client ------ 项目文件
 
-model ------ 模板
+dist ------ webpack打包生成目录
 
 ## command
 
