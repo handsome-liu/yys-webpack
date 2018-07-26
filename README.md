@@ -4,9 +4,9 @@
 
 ## description
 
-home: <https://handsome-liu.github.io/yys/home.html>
+home: <https://handsome-liu.github.io/yys-webpack/dist/home.html>
 
-index: <https://handsome-liu.github.io/yys/index.html>
+index: <https://handsome-liu.github.io/yys-webpack/dist/index.html>
 
 ## file explain
 
