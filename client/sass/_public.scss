@@ -1,0 +1,156 @@
+//Responsive设计
+$browser-default-font-size: 16px !default; //变量的值可以根据自己需求定义
+
+//媒体查询
+$screen-xs-min: 480px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+$screen-xx-max: ($screen-xs-min - 1) !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+//0 - 480
+// @media screen and (max-width: $screen-xx-max) {}
+//480 - 767
+// @media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {}
+//768 - 991
+// @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {}
+//992 - 1199
+// @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {}
+//1200 - OO
+// @media screen and (min-width: $screen-lg-min) {}
+
+$radius: 4px; //圆角半径
+$body-size: 14px; //body字体
+/* reset css */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $browser-default-font-size;
+}
+body {
+    background: #fff;
+    color: #000;
+    font: {
+        size: $body-size;
+        family: 'Microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+    }
+}
+td,
+th,
+caption {
+    font-size: $body-size;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+i {
+    font-style: inherit;
+    font-weight: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    border: none;
+}
+ol,
+ul,
+li {
+    list-style: none;
+}
+li {
+    vertical-align: top;
+}
+input,
+textarea,
+select,
+button {
+    font: {
+        size: inherit;
+        family: inherit;
+    }
+}
+
+input {
+    line-height: inherit;
+}
+button {
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+}
+
+//rem转换
+@function pxTorem($px) {
+    //$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+//去除单位
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+//清除浮动
+%clearfix {
+    *zoom: 1;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+// 边框
+@mixin border($color) {
+    border: 1px solid $color;
+    box-sizing: border-box;
+}

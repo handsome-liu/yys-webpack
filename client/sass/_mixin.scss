@@ -1,0 +1,115 @@
+//%占位符
+%close {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: {
+        image: url('../images/index/close.png');
+        repeat: no-repeat;
+        position: center;
+    }
+    transform: rotate(0deg);
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
+
+//mixin
+
+// @include i(
+//     $id: 'newinfo',
+//     $div-width: $newinfo-img-width,
+//     $div-height: $newinfo-img-height,
+//     $gap: $newinfo-gap,
+//     $t: $newinfo-t,
+//     $color: #fff,
+//     $trigger: ':hover'
+// );
+
+@mixin i($name, $div-width, $div-height, $gap: 10px, $t: 0.5, $color: #fff, $trigger: ':hover') {
+    $animation-i-width: $div-width - $gap * 2; //div线框动画宽度值
+    $animation-i-height: $div-height - $gap * 2; //div线框动画高度值
+    $s: ($animation-i-width + $animation-i-height) * 2; //div线框运动总位移
+    $v: $s / $t; //div线框运动速度
+    i {
+        position: absolute;
+        background-color: $color;
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+            width: 0;
+            height: 2px;
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+            width: 2px;
+            height: 0;
+        }
+        &:nth-of-type(1) {
+            top: $gap;
+            left: $gap;
+        }
+        &:nth-of-type(2) {
+            top: $gap;
+            right: $gap;
+        }
+        &:nth-of-type(3) {
+            bottom: $gap;
+            right: $gap;
+        }
+        &:nth-of-type(4) {
+            bottom: $gap;
+            left: $gap;
+        }
+    }
+    &#{$trigger} {
+        i {
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                animation-fill-mode: forwards;
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(3) {
+                animation: {
+                    name: #{$name}-i-width;
+                    duration: strip-units($animation-i-width/$v) * 1s;
+                }
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
+                animation: {
+                    name: #{$name}-i-height;
+                    duration: strip-units($animation-i-height/$v) * 1s;
+                }
+            }
+            &:nth-of-type(2) {
+                animation-delay: strip-units($animation-i-width/$v) * 1s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: strip-units(($animation-i-width + $animation-i-height) / $v) * 1s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: strip-units(($animation-i-width * 2 + $animation-i-height) / $v) * 1s;
+            }
+        }
+    }
+    @keyframes #{$name}-i-width {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: $animation-i-width;
+        }
+    }
+    @keyframes #{$name}-i-height {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: $animation-i-height;
+        }
+    }
+}

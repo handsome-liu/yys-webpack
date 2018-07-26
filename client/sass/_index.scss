@@ -1,0 +1,714 @@
+/* index */
+body {
+    position: relative;
+    min-width: $body-min-width;
+    max-width: $body-max-width;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    // 禁止滚动
+    &.noScroll {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+/* 背景 */
+#bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    .bg1,
+    .bg2,
+    .bg3 {
+        background: {
+            repeat: no-repeat;
+            position: center top;
+        }
+    }
+    .bg1,
+    .bg2 {
+        height: 1080px;
+    }
+    .bg1 {
+        background-image: url('../images/index/bg1.jpg');
+        object {
+            margin-top: $header-height;
+            width: 100%;
+            height: 1022px;
+        }
+    }
+    .bg2 {
+        background-image: url('../images/index/bg2.jpg');
+    }
+    .bg3 {
+        height: 534px;
+        background-image: url('../images/index/bg3.jpg');
+    }
+}
+
+/* 头部 */
+#header {
+    height: $header-height;
+    background: #fff;
+}
+
+/* 首屏 */
+#first-screen {
+    $animation-duration: 2s;
+    $animation-timing-function: ease;
+    position: relative;
+    height: 1040px;
+    .swp1,
+    .swp2,
+    .swp3,
+    .swp4,
+    .mouse,
+    .videoBtn {
+        position: absolute;
+    }
+    .swp1 {
+        left: 30px;
+        top: 15px;
+        opacity: 1;
+        animation: {
+            name: swp1;
+            duration: $animation-duration;
+            timing-function: $animation-timing-function;
+        }
+        @keyframes swp1 {
+            0% {
+                left: -190px;
+                opacity: 0;
+            }
+            100% {
+                left: 30px;
+                opacity: 1;
+            }
+        }
+        .logo1,
+        .logo2 {
+            vertical-align: middle;
+        }
+        .logo2 {
+            $width-height: 90px;
+            width: $width-height;
+            height: $width-height;
+            margin-left: 10px;
+            border: {
+                color: #fff;
+                width: 2px;
+                style: solid;
+                radius: 15px;
+            }
+        }
+    }
+    .swp2 {
+        right: 30px;
+        top: 30px;
+        width: 177px;
+        height: 45px;
+        background: {
+            image: url('../images/index/goindex.png');
+            repeat: no-repeat;
+            position: center;
+        }
+        animation: {
+            name: swp2;
+            duration: $animation-duration;
+            timing-function: $animation-timing-function;
+        }
+        @keyframes swp2 {
+            0% {
+                right: -190px;
+                opacity: 0;
+            }
+            100% {
+                right: 30px;
+                opacity: 1;
+            }
+        }
+    }
+    .swp3 {
+        right: 45px;
+        top: 70px;
+        width: 340px;
+        height: 521px;
+        background: {
+            image: url('../images/index/gameversion.png');
+            repeat: no-repeat;
+            position: center;
+        }
+        animation: {
+            name: swp3;
+            duration: $animation-duration;
+            timing-function: $animation-timing-function;
+        }
+        @keyframes swp3 {
+            0% {
+                top: 600px;
+                opacity: 0;
+            }
+            100% {
+                top: 70px;
+                opacity: 1;
+            }
+        }
+    }
+    .swp4 {
+        $qrcode-width: 120px;
+        right: 120px;
+        top: 560px;
+        animation: {
+            name: swp4;
+            duration: $animation-duration;
+            timing-function: $animation-timing-function;
+        }
+        @keyframes swp4 {
+            0% {
+                top: 720px;
+                opacity: 0;
+            }
+            100% {
+                top: 560px;
+                opacity: 1;
+            }
+        }
+        p {
+            font: {
+                weight: bold;
+                size: 16px;
+            }
+            color: #3d2672;
+        }
+        .qrcode,
+        .down {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .qrcode {
+            position: relative;
+            width: $qrcode-width;
+            height: $qrcode-width;
+            border: {
+                width: 5px;
+                style: solid;
+                color: rgba($color: #fff, $alpha: 0.5);
+                radius: 5px;
+            }
+            background: {
+                image: url('../images/index/qrcode.png');
+                repeat: no-repeat;
+                size: cover;
+                position: center;
+            }
+            .line {
+                position: absolute;
+                top: 0;
+                margin: {
+                    left: -12px;
+                }
+                animation: {
+                    name: qrcode;
+                    duration: $animation-duration;
+                    timing-function: $animation-timing-function;
+                    iteration-count: infinite;
+                }
+                @keyframes qrcode {
+                    0% {
+                        top: 0;
+                    }
+                    50% {
+                        top: 112px;
+                    }
+                    100% {
+                        top: 0;
+                    }
+                }
+            }
+        }
+        .down {
+            a {
+                display: block;
+                width: 205px;
+                height: 61px;
+                background-repeat: no-repeat;
+                &.android {
+                    background-image: url('../images/index/downand.png');
+                }
+                &.ios {
+                    margin-top: 5px;
+                    background-image: url('../images/index/downios.png');
+                }
+                span {
+                    display: block;
+                    height: 100%;
+                    background-color: rgba($color: #000, $alpha: 0.5);
+                    &:hover {
+                        background-color: rgba($color: #000, $alpha: 0);
+                    }
+                    &,
+                    &:hover {
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    .mouse {
+        bottom: 260px;
+        left: 0;
+        right: 0;
+        width: 30px;
+        height: 70px;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        background: {
+            image: url('../images/index/dBtn.png');
+            repeat: no-repeat;
+            position: center;
+            size: cover;
+        }
+        animation: {
+            name: mouse;
+            duration: 1s;
+            timing-function: linear;
+            iteration-count: infinite;
+        }
+        @keyframes mouse {
+            0% {
+                bottom: 260px;
+                opacity: 1;
+            }
+            100% {
+                bottom: 100px;
+                opacity: 0;
+            }
+        }
+    }
+    .videoBtn {
+        top: 400px;
+        right: 325px;
+        width: 165px;
+        height: 120px;
+        text-align: right;
+        background: {
+            image: url('../images/index/videoBtn.png');
+            repeat: no-repeat;
+            position: center;
+        }
+        cursor: pointer;
+        .videoBtnAR {
+            margin: {
+                right: 2px;
+                top: 2px;
+            }
+            transform: rotate(33deg);
+        }
+    }
+    .video {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        .wrap {
+            $video-width: 800px;
+            $video-height: 450px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: $video-width;
+            height: $video-height;
+            margin: {
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+            }
+            border: {
+                width: 2px;
+                style: solid;
+                color: #b69476;
+            }
+            object {
+                width: $video-width;
+                height: $video-height;
+            }
+            .close {
+                @extend %close;
+                top: 0;
+                right: -50px;
+            }
+        }
+    }
+}
+
+/* 新版本情报 */
+#newinfo {
+    height: 700px;
+    .main {
+        $newinfo-img-width: 418px; //新版本情报的图片宽度
+        $newinfo-img-height: 196px; //新版本情报的图片高度
+        $newinfo-gap: 8px; //新版本情报的图片和线框的间隙
+        $newinfo-t: 0.5; //新版本情报图片运动时间
+        width: $body-min-width;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        .title,
+        ul li {
+            position: relative;
+            top: 0;
+            opacity: 1;
+            background-repeat: no-repeat;
+            transition: all $newinfo-t * 1s;
+        }
+        .title.hidden,
+        ul li.hidden {
+            top: 100px;
+            opacity: 0;
+        }
+        .title {
+            height: 150px;
+            background: {
+                image: url('../images/index/newinfo/newinfo.png');
+                position: center;
+            }
+        }
+        ul {
+            $right: 10px;
+            $top-bottom: 20px;
+            margin: {
+                right: -$right;
+            }
+            font-size: 0;
+            li {
+                display: inline-block;
+                width: $newinfo-img-width;
+                height: $newinfo-img-height;
+                margin: {
+                    right: $right;
+                    top: $top-bottom;
+                    bottom: $top-bottom;
+                }
+                font-size: 16px;
+                cursor: pointer;
+                //循环
+                @for $var from 1 through 6 {
+                    &:nth-of-type(#{$var}) {
+                        background-image: url('../images/index/newinfo/p#{$var}.png');
+                    }
+                }
+                @include i(
+                    $name: 'newinfo',
+                    $div-width: $newinfo-img-width,
+                    $div-height: $newinfo-img-height,
+                    $gap: $newinfo-gap,
+                    $t: $newinfo-t,
+                    $color: #a57c47,
+                    $trigger: ':hover'
+                );
+                &:hover {
+                    top: -15px;
+                }
+            }
+        }
+    }
+    .details {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        .content {
+            $details-width: $body-min-width;
+            $details-height: 735px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            width: $details-width;
+            height: $details-height;
+            margin: auto;
+            ul {
+                position: relative;
+                right: 0;
+                width: 900%;
+                font-size: 0;
+                li {
+                    display: inline-block;
+                    width: $details-width;
+                    height: $details-height;
+                    margin: {
+                        left: auto;
+                        right: auto;
+                    }
+                    font-size: 16px;
+                    background: {
+                        repeat: no-repeat;
+                        position: {
+                            x: -20px;
+                            y: -20px;
+                        }
+                    }
+                    @for $var from 1 through 6 {
+                        &:nth-of-type(#{$var}) {
+                            background-image: url('../images/index/newinfo/ren#{$var}.png');
+                        }
+                    }
+                    &:nth-of-type(7) {
+                        background-image: url('../images/index/newinfo/ren1.png');
+                    }
+                    .txt {
+                        $txt-width: 440px;
+                        $txt-height: 310px;
+                        @include border(transparent);
+                        position: relative;
+                        overflow: hidden;
+                        width: $txt-width;
+                        height: $txt-height;
+                        margin: {
+                            left: 530px;
+                            top: 190px;
+                        }
+                        padding-right: 50px;
+                        .con {
+                            position: relative;
+                            line-height: 35px;
+                            color: #333;
+                            .boldBlack,
+                            .boldRed {
+                                font-weight: bold;
+                            }
+                            .boldRed {
+                                color: #e5402a;
+                            }
+                            .boldBlack {
+                                color: black;
+                            }
+                        }
+                        .scrollbar {
+                            $bar-width: 10px;
+                            $bar-radius: 5px;
+                            display: none;
+                            right: 0;
+                            height: $txt-height;
+                            background-color: #eee;
+                            opacity: 0.5;
+                            cursor: pointer;
+                            &,
+                            & span {
+                                position: absolute;
+                                width: $bar-width;
+                                top: 0;
+                                border-radius: $bar-radius;
+                            }
+                            span {
+                                height: 50px;
+                                background-color: #000;
+                            }
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                        &:hover {
+                            .scrollbar {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .close {
+                @extend %close;
+                top: 105px;
+                right: 120px;
+            }
+            .left,
+            .right {
+                position: absolute;
+                width: 47px;
+                height: 18px;
+                top: 0;
+                bottom: 0;
+                margin: {
+                    top: auto;
+                    bottom: auto;
+                }
+                background: {
+                    repeat: no-repeat;
+                    position: center;
+                }
+                animation: {
+                    duration: 2s;
+                    timing-function: linear;
+                    iteration-count: infinite;
+                }
+                cursor: pointer;
+            }
+            .left {
+                left: 15px;
+                background: {
+                    image: url('../images/index/newinfo/toleft.png');
+                }
+                &:hover {
+                    animation-name: newinfo-left;
+                }
+                @keyframes newinfo-left {
+                    0% {
+                        left: 15px;
+                    }
+                    50% {
+                        left: 0;
+                    }
+                    100% {
+                        left: 15px;
+                    }
+                }
+            }
+            .right {
+                right: 15px;
+                background: {
+                    image: url('../images/index/newinfo/toright.png');
+                }
+                &:hover {
+                    animation-name: newinfo-right;
+                }
+
+                @keyframes newinfo-right {
+                    0% {
+                        right: 15px;
+                    }
+                    50% {
+                        right: 0;
+                    }
+                    100% {
+                        right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 游戏特色 */
+#game {
+    .title {
+        height: 150px;
+        background: {
+            image: url('../images/index/game/game_title.png');
+            repeat: no-repeat;
+            position: center;
+        }
+    }
+    .banner {
+        $game-img-width: 776px;
+        $game-img-height: 439px;
+        $mid-img-left-right: 100px;
+        position: relative;
+        width: $body-min-width;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        transform-style: preserve-3d; //不知道为何必须在这里或者直接不写
+        ul li,
+        .leftArrow,
+        .rightArrow {
+            position: absolute;
+            top: 0;
+            background: {
+                repeat: no-repeat;
+                position: center;
+            }
+        }
+        ul {
+            position: relative;
+            width: $game-img-width + $mid-img-left-right * 2;
+            height: $game-img-height;
+            margin: {
+                left: auto;
+                right: auto;
+            }
+            perspective: 800px;
+            li {
+                $game-img-width: 776px; //新版本情报的图片宽度
+                $game-img-height: 439px; //新版本情报的图片高度
+                $game-gap: 15px; //新版本情报的图片和线框的间隙
+                $game-t: 1.5; //新版本情报图片运动时间
+                $rotate-Y: 66deg;
+                $translate3d-X: 386px;
+                $translate3d-Z: -445px;
+                left: $mid-img-left-right;
+                background-color: #000;
+                transform: translate3d(0, 0, $translate3d-Z) rotateY(0);
+                transition: transform 0.5s;
+                &,
+                & img {
+                    width: $game-img-width;
+                    height: $game-img-height;
+                }
+                img {
+                    opacity: 0.5;
+                }
+                @include i(
+                    $name: 'game',
+                    $div-width: $game-img-width,
+                    $div-height: $game-img-height,
+                    $gap: $game-gap,
+                    $t: $game-t,
+                    $color: #fff,
+                    $trigger: '.middle'
+                );
+                &.left {
+                    z-index: 2;
+                    transform: translate3d(-$translate3d-X, 0, $translate3d-Z) rotateY($rotate-Y);
+                }
+                &.middle {
+                    z-index: 3;
+                    transform: translate3d(0, 0, 0) rotateY(0);
+                    img {
+                        opacity: 1;
+                    }
+                }
+                &.right {
+                    z-index: 1;
+                    transform: translate3d($translate3d-X, 0, $translate3d-Z) rotateY(-$rotate-Y);
+                }
+            }
+        }
+        .leftArrow,
+        .rightArrow {
+            bottom: 0;
+            width: 42px;
+            height: 82px;
+            margin: auto;
+            cursor: pointer;
+        }
+        .leftArrow {
+            left: 65px;
+            background-image: url('../images/index/game/left.png');
+        }
+        .rightArrow {
+            right: 65px;
+            background-image: url('../images/index/game/right.png');
+        }
+    }
+}
