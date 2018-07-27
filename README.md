@@ -1,6 +1,6 @@
 # yys
 
-阴阳师练习-webpack打包
+阴阳师练习-webpack 打包
 
 ## description
 
@@ -10,7 +10,7 @@ index: <https://handsome-liu.github.io/yys-webpack/dist/index.html>
 
 ## file explain
 
-.babelrc ------ ES6转ES5，兼容IE
+.babelrc ------ ES6 转 ES5，兼容 IE
 
 .gitignore ------ 忽略 git 版本提交的文件
 
@@ -20,10 +20,14 @@ webpack.config.js ------ 管理 webpack 的参数设置
 
 client ------ 项目文件
 
-dist ------ webpack打包生成目录
+dist ------ webpack 打包生成目录
 
 ## command
 
-webpack ------ 打包创建dist目录下的文件
+npm i ------ 加载所有依赖包
 
-npm run start ------ 运行服务器的webpack
+webpack ------ 打包创建 dist 目录下的文件
+
+npm run start ------ 以开发者模式运行webpack服务器, 并打开默认浏览器
+
+npm run build ------ 以生产者环境打包文件到dist目录中
