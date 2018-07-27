@@ -1,11 +1,11 @@
-const { path, HtmlWebpackPlugin, ExtractTextPlugin, Webpack, outPath } = {
+const { path, HtmlWebpackPlugin, ExtractTextPlugin, Webpack, MiniCssExtractPlugin, outPath } = {
     path: require('path'),
     HtmlWebpackPlugin: require('html-webpack-plugin'),
-    ExtractTextPlugin: require('extract-text-webpack-plugin'),
+    MiniCssExtractPlugin: require('mini-css-extract-plugin'),
     Webpack: require('webpack'),
     outPath: '' //设置生成路径
 };
-
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //封装HtmlWebpackPlugin
 class Html {
     constructor(title = 'undefind', filename = 'index') {
@@ -38,7 +38,7 @@ module.exports = {
         //HTML文件的创建
         new Html('321123', 'index'),
         //生成目标css文件名
-        new ExtractTextPlugin('[name].css'),
+        new MiniCssExtractPlugin('[name].css'),
         //热加载名字
         new Webpack.NamedModulesPlugin(),
         //热加载模块
@@ -57,10 +57,7 @@ module.exports = {
             // scss样式的打包导入
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             // style中的url图片引入打包
             {
