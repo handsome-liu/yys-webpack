@@ -6,8 +6,22 @@ const { path, HtmlWebpackPlugin, ExtractTextPlugin, Webpack, outPath } = {
     outPath: '' //设置生成路径
 };
 
+class Html {
+    constructor(title = 'undefind', filename = 'index') {
+        return new HtmlWebpackPlugin({
+            title: title,
+            //设置创建文件名
+            filename: `${filename}.html`,
+            //按照此模板创建
+            template: `./client/${filename}.html`,
+            // 设置favicon.ico
+            favicon: './client/icon/favicon.ico'
+        });
+    }
+}
+
 module.exports = {
-    // 打包模式
+    // 打包模式  development   production
     mode: 'development',
     // 入口文件
     entry: {
@@ -21,15 +35,7 @@ module.exports = {
     },
     plugins: [
         //HTML文件的创建
-        new HtmlWebpackPlugin({
-            title: '123',
-            //设置创建文件名
-            filename: 'index.html',
-            //按照此模板创建
-            template: './client/index.html',
-            // 设置favicon.ico
-            favicon: './client/favicon.ico'
-        }),
+        new Html('321123', 'index'),
         //生成目标css文件名
         new ExtractTextPlugin('[name].css'),
         //热加载名字
@@ -80,18 +86,13 @@ module.exports = {
                 ]
             },
             // html中的img图片引入打包
-            // {
-            //     test: /\.(html)$/,
-            //     use: {
-            //         loader: 'html-loader'
-            //     }
-            // },
             {
                 test: /\.html$/,
                 use: {
                     loader: 'html-loader',
                     options: {
-                        name: 'html/[name].[ext]'
+                        //开启压缩
+                        minimize: true
                     }
                 }
             }

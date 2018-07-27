@@ -1,36 +1,37 @@
 {
-  "name": "yys-webpack",
-  "version": "1.0.0",
-  "description": "阴阳师练习-webpack打包",
-  "main": "home.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/handsome-liu/yys-webpack.git"
-  },
-  "author": "handsome-liu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/handsome-liu/yys-webpack/issues"
-  },
-  "homepage": "https://github.com/handsome-liu/yys-webpack#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^1.0.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^1.1.11",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
-  }
+    "name": "yys-webpack",
+    "version": "1.0.0",
+    "description": "阴阳师练习-webpack打包",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open",
+        "build": "webpack --mode production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/handsome-liu/yys-webpack.git"
+    },
+    "author": "handsome-liu",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/handsome-liu/yys-webpack/issues"
+    },
+    "homepage": "https://github.com/handsome-liu/yys-webpack#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.7.0",
+        "css-loader": "^1.0.0",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.9.2",
+        "sass-loader": "^7.0.3",
+        "style-loader": "^0.21.0",
+        "webpack": "^4.16.2",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.5"
+    }
 }
