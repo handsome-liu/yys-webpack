@@ -31,21 +31,13 @@ module.exports = {
         // 输出目录
         path: path.resolve(__dirname, `dist${outPath}`),
         //输出文件名
-<<<<<<< HEAD
         filename: 'js/[name].js'
-=======
-        filename: `${outPath}source/[name].js`
->>>>>>> 8cbae04a5bb91b138a1e65b49d870efa45fa667c
     },
     plugins: [
         //HTML文件的创建
         new Html('321123', 'index'),
         //生成目标css文件名
-<<<<<<< HEAD
         new ExtractTextPlugin('[name].css'),
-=======
-        new ExtractTextPlugin(`${outPath}source/yys.css`),
->>>>>>> 8cbae04a5bb91b138a1e65b49d870efa45fa667c
         //热加载名字
         new Webpack.NamedModulesPlugin(),
         //热加载模块
@@ -76,19 +68,11 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-<<<<<<< HEAD
                             name: 'images/[name].[ext]'
-=======
-                            //文件名
-                            name: '[name].[ext]',
-                            //存放路径
-                            outputPath: `${outPath}source/`
->>>>>>> 8cbae04a5bb91b138a1e65b49d870efa45fa667c
                         }
                     }
                 ]
             },
-<<<<<<< HEAD
             // 打包视频，flash资源
             {
                 test: /\.swf$/,
@@ -111,21 +95,6 @@ module.exports = {
                         minimize: true
                     }
                 }
-=======
-            // html中的img图片引入打包
-            {
-                test: /\.(html)$/,
-                use: {
-                    loader: 'html-loader'
-                }
-            },
-            //ES6转ES5，兼容IE
-            {
-                test: /\.js$/,
-                use: ['babel-loader'],
-                //exclude 排除，不需要编译的目录，提高编译速度（node_modules是模块安装位置，不需要编译）
-                exclude: /^node_modules$/
->>>>>>> 8cbae04a5bb91b138a1e65b49d870efa45fa667c
             }
         ]
     },
