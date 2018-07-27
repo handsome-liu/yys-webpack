@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "0be52eed1dedce8e3415";
+/******/ 	var hotCurrentHash = "e7510d4703f57c021686";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -794,17 +794,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./client/favicon.ico":
-/*!****************************!*\
-  !*** ./client/favicon.ico ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"favicon.ico\";\n\n//# sourceURL=webpack:///./client/favicon.ico?");
-
-/***/ }),
-
 /***/ "./client/flash/yys_xsjj.swf":
 /*!***********************************!*\
   !*** ./client/flash/yys_xsjj.swf ***!
@@ -884,7 +873,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../favicon.ico */ \"./client/favicon.ico\");\n\n__webpack_require__(/*! ../flash/yys_xsjj.swf */ \"./client/flash/yys_xsjj.swf\");\n\n__webpack_require__(/*! ../sass/yys.scss */ \"./client/sass/yys.scss\");\n\nvar _Video = __webpack_require__(/*! ./Video */ \"./client/js/Video.js\");\n\nvar _Video2 = _interopRequireDefault(_Video);\n\nvar _Newinfo = __webpack_require__(/*! ./Newinfo */ \"./client/js/Newinfo.js\");\n\nvar _Newinfo2 = _interopRequireDefault(_Newinfo);\n\nvar _Scrollbar = __webpack_require__(/*! ./Scrollbar */ \"./client/js/Scrollbar.js\");\n\nvar _Scrollbar2 = _interopRequireDefault(_Scrollbar);\n\nvar _ScrollShow = __webpack_require__(/*! ./ScrollShow */ \"./client/js/ScrollShow.js\");\n\nvar _ScrollShow2 = _interopRequireDefault(_ScrollShow);\n\nvar _Banner = __webpack_require__(/*! ./Banner */ \"./client/js/Banner.js\");\n\nvar _Banner2 = _interopRequireDefault(_Banner);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Video\n\n//scss\nnew _Video2.default({\n    $btn: $('#first-screen').find('.videoBtn'),\n    $video: $('#first-screen').find('.video'),\n    $close: $('#first-screen').find('.video .close')\n}).videoset('noScroll');\n\n// Newinfo\n\n//javascript\nnew _Newinfo2.default({\n    $list: $('#newinfo').find('.main ul li'),\n    $details: $('#newinfo').find('.details'),\n    $banner: $('#newinfo').find('.details .content ul'),\n    $close: $('#newinfo').find('.details .content .close'),\n    $left: $('#newinfo').find('.details .content .left'),\n    $right: $('#newinfo').find('.details .content .right')\n}).newinfoset('noScroll', function () {\n    //scrollbar\n    new _Scrollbar2.default({\n        $con: $('#newinfo').find('.details .content ul li .txt .con'),\n        $scroll: $('#newinfo').find('.details .content ul li .txt .scrollbar'),\n        $bar: $('#newinfo').find('.details .content ul li .txt .scrollbar span')\n    }).scrollbarset();\n});\n\n//ScrollShow\nnew _ScrollShow2.default([$('#newinfo .main .title'), $('#newinfo .main ul li')]).init();\n// new ScrollShow([\n//     $('#newinfo .main .title'),\n//     $('#newinfo .main ul li:nth-of-type(1)'),\n//     $('#newinfo .main ul li:nth-of-type(2)'),\n//     $('#newinfo .main ul li:nth-of-type(3)'),\n//     $('#newinfo .main ul li:nth-of-type(6)'),\n//     $('#newinfo .main ul li:nth-of-type(5)'),\n//     $('#newinfo .main ul li:nth-of-type(4)')\n// ]).init();\n\n// Banner\nnew _Banner2.default({\n    $img: $('#game').find('.banner ul li'),\n    $left: $('#game').find('.banner .leftArrow'),\n    $right: $('#game').find('.banner .rightArrow')\n}).init(3);\n\n//# sourceURL=webpack:///./client/js/index.js?");
+eval("\n\n__webpack_require__(/*! ../flash/yys_xsjj.swf */ \"./client/flash/yys_xsjj.swf\");\n\n__webpack_require__(/*! ../sass/yys.scss */ \"./client/sass/yys.scss\");\n\nvar _Video = __webpack_require__(/*! ./Video */ \"./client/js/Video.js\");\n\nvar _Video2 = _interopRequireDefault(_Video);\n\nvar _Newinfo = __webpack_require__(/*! ./Newinfo */ \"./client/js/Newinfo.js\");\n\nvar _Newinfo2 = _interopRequireDefault(_Newinfo);\n\nvar _Scrollbar = __webpack_require__(/*! ./Scrollbar */ \"./client/js/Scrollbar.js\");\n\nvar _Scrollbar2 = _interopRequireDefault(_Scrollbar);\n\nvar _ScrollShow = __webpack_require__(/*! ./ScrollShow */ \"./client/js/ScrollShow.js\");\n\nvar _ScrollShow2 = _interopRequireDefault(_ScrollShow);\n\nvar _Banner = __webpack_require__(/*! ./Banner */ \"./client/js/Banner.js\");\n\nvar _Banner2 = _interopRequireDefault(_Banner);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Video\n\n//scss\nnew _Video2.default({\n    $btn: $('#first-screen').find('.videoBtn'),\n    $video: $('#first-screen').find('.video'),\n    $close: $('#first-screen').find('.video .close')\n}).videoset('noScroll');\n\n// Newinfo\n\n//javascript\n// import '../favicon.ico';\nnew _Newinfo2.default({\n    $list: $('#newinfo').find('.main ul li'),\n    $details: $('#newinfo').find('.details'),\n    $banner: $('#newinfo').find('.details .content ul'),\n    $close: $('#newinfo').find('.details .content .close'),\n    $left: $('#newinfo').find('.details .content .left'),\n    $right: $('#newinfo').find('.details .content .right')\n}).newinfoset('noScroll', function () {\n    //scrollbar\n    new _Scrollbar2.default({\n        $con: $('#newinfo').find('.details .content ul li .txt .con'),\n        $scroll: $('#newinfo').find('.details .content ul li .txt .scrollbar'),\n        $bar: $('#newinfo').find('.details .content ul li .txt .scrollbar span')\n    }).scrollbarset();\n});\n\n//ScrollShow\nnew _ScrollShow2.default([$('#newinfo .main .title'), $('#newinfo .main ul li')]).init();\n// new ScrollShow([\n//     $('#newinfo .main .title'),\n//     $('#newinfo .main ul li:nth-of-type(1)'),\n//     $('#newinfo .main ul li:nth-of-type(2)'),\n//     $('#newinfo .main ul li:nth-of-type(3)'),\n//     $('#newinfo .main ul li:nth-of-type(6)'),\n//     $('#newinfo .main ul li:nth-of-type(5)'),\n//     $('#newinfo .main ul li:nth-of-type(4)')\n// ]).init();\n\n// Banner\nnew _Banner2.default({\n    $img: $('#game').find('.banner ul li'),\n    $left: $('#game').find('.banner .leftArrow'),\n    $right: $('#game').find('.banner .rightArrow')\n}).init(3);\n\n//# sourceURL=webpack:///./client/js/index.js?");
 
 /***/ }),
 

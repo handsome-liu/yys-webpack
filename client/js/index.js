@@ -1,4 +1,4 @@
-import '../favicon.ico';
+// import '../favicon.ico';
 import '../flash/yys_xsjj.swf';
 //scss
 import '../sass/yys.scss';
