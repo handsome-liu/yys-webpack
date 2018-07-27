@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "0be52eed1dedce8e3415";
+/******/ 	var hotCurrentHash = "16fb6928584c28e99fa5";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -801,7 +801,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"favicon.ico\";\n\n//# sourceURL=webpack:///./client/favicon.ico?");
+eval("module.exports = __webpack_require__.p + \"source/favicon.ico\";\n\n//# sourceURL=webpack:///./client/favicon.ico?");
 
 /***/ }),
 
@@ -812,7 +812,7 @@ eval("module.exports = __webpack_require__.p + \"favicon.ico\";\n\n//# sourceURL
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"flash/yys_xsjj.swf\";\n\n//# sourceURL=webpack:///./client/flash/yys_xsjj.swf?");
+eval("module.exports = __webpack_require__.p + \"source/yys_xsjj.swf\";\n\n//# sourceURL=webpack:///./client/flash/yys_xsjj.swf?");
 
 /***/ }),
 

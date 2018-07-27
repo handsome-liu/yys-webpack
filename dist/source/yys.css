@@ -100,7 +100,7 @@ table {
   position: absolute;
   width: 34px;
   height: 34px;
-  background-image: url(images/close.png);
+  background-image: url(source/close.png);
   background-repeat: no-repeat;
   background-position: center;
   transform: rotate(0deg);
@@ -136,16 +136,16 @@ body {
   #bg .bg2 {
     height: 1080px; }
   #bg .bg1 {
-    background-image: url(images/bg1.jpg); }
+    background-image: url(source/bg1.jpg); }
     #bg .bg1 object {
       margin-top: 54px;
       width: 100%;
       height: 1022px; }
   #bg .bg2 {
-    background-image: url(images/bg2.jpg); }
+    background-image: url(source/bg2.jpg); }
   #bg .bg3 {
     height: 534px;
-    background-image: url(images/bg3.jpg); }
+    background-image: url(source/bg3.jpg); }
 
 /* 头部 */
 #header {
@@ -194,7 +194,7 @@ body {
     top: 30px;
     width: 177px;
     height: 45px;
-    background-image: url(images/goindex.png);
+    background-image: url(source/goindex.png);
     background-repeat: no-repeat;
     background-position: center;
     animation-name: swp2;
@@ -213,7 +213,7 @@ body {
     top: 70px;
     width: 340px;
     height: 521px;
-    background-image: url(images/gameversion.png);
+    background-image: url(source/gameversion.png);
     background-repeat: no-repeat;
     background-position: center;
     animation-name: swp3;
@@ -257,7 +257,7 @@ body {
       border-style: solid;
       border-color: rgba(255, 255, 255, 0.5);
       border-radius: 5px;
-      background-image: url(images/qrcode.png);
+      background-image: url(source/qrcode.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; }
@@ -283,10 +283,10 @@ body {
       height: 61px;
       background-repeat: no-repeat; }
       #first-screen .swp4 .down a.android {
-        background-image: url(images/downand.png); }
+        background-image: url(source/downand.png); }
       #first-screen .swp4 .down a.ios {
         margin-top: 5px;
-        background-image: url(images/downios.png); }
+        background-image: url(source/downios.png); }
       #first-screen .swp4 .down a span {
         display: block;
         height: 100%;
@@ -303,7 +303,7 @@ body {
     height: 70px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(images/dBtn.png);
+    background-image: url(source/dBtn.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -325,7 +325,7 @@ body {
     width: 165px;
     height: 120px;
     text-align: right;
-    background-image: url(images/videoBtn.png);
+    background-image: url(source/videoBtn.png);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer; }
@@ -383,7 +383,7 @@ body {
       opacity: 0; }
     #newinfo .main .title {
       height: 150px;
-      background-image: url(images/newinfo.png);
+      background-image: url(source/newinfo.png);
       background-position: center; }
     #newinfo .main ul {
       margin-right: -10px;
@@ -398,17 +398,17 @@ body {
         font-size: 16px;
         cursor: pointer; }
         #newinfo .main ul li:nth-of-type(1) {
-          background-image: url(images/p1.png); }
+          background-image: url(source/p1.png); }
         #newinfo .main ul li:nth-of-type(2) {
-          background-image: url(images/p2.png); }
+          background-image: url(source/p2.png); }
         #newinfo .main ul li:nth-of-type(3) {
-          background-image: url(images/p3.png); }
+          background-image: url(source/p3.png); }
         #newinfo .main ul li:nth-of-type(4) {
-          background-image: url(images/p4.png); }
+          background-image: url(source/p4.png); }
         #newinfo .main ul li:nth-of-type(5) {
-          background-image: url(images/p5.png); }
+          background-image: url(source/p5.png); }
         #newinfo .main ul li:nth-of-type(6) {
-          background-image: url(images/p6.png); }
+          background-image: url(source/p6.png); }
         #newinfo .main ul li i {
           position: absolute;
           background-color: #a57c47; }
@@ -494,19 +494,19 @@ body {
           background-position-x: -20px;
           background-position-y: -20px; }
           #newinfo .details .content ul li:nth-of-type(1) {
-            background-image: url(images/ren1.png); }
+            background-image: url(source/ren1.png); }
           #newinfo .details .content ul li:nth-of-type(2) {
-            background-image: url(images/ren2.png); }
+            background-image: url(source/ren2.png); }
           #newinfo .details .content ul li:nth-of-type(3) {
-            background-image: url(images/ren3.png); }
+            background-image: url(source/ren3.png); }
           #newinfo .details .content ul li:nth-of-type(4) {
-            background-image: url(images/ren4.png); }
+            background-image: url(source/ren4.png); }
           #newinfo .details .content ul li:nth-of-type(5) {
-            background-image: url(images/ren5.png); }
+            background-image: url(source/ren5.png); }
           #newinfo .details .content ul li:nth-of-type(6) {
-            background-image: url(images/ren6.png); }
+            background-image: url(source/ren6.png); }
           #newinfo .details .content ul li:nth-of-type(7) {
-            background-image: url(images/ren1.png); }
+            background-image: url(source/ren1.png); }
           #newinfo .details .content ul li .txt {
             border: 1px solid transparent;
             box-sizing: border-box;
@@ -568,7 +568,7 @@ body {
         cursor: pointer; }
       #newinfo .details .content .left {
         left: 15px;
-        background-image: url(images/toleft.png); }
+        background-image: url(source/toleft.png); }
         #newinfo .details .content .left:hover {
           animation-name: newinfo-left; }
 
@@ -581,7 +581,7 @@ body {
     left: 15px; } }
       #newinfo .details .content .right {
         right: 15px;
-        background-image: url(images/toright.png); }
+        background-image: url(source/toright.png); }
         #newinfo .details .content .right:hover {
           animation-name: newinfo-right; }
 
@@ -596,7 +596,7 @@ body {
 /* 游戏特色 */
 #game .title {
   height: 150px;
-  background-image: url(images/game_title.png);
+  background-image: url(source/game_title.png);
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -698,7 +698,7 @@ body {
     cursor: pointer; }
   #game .banner .leftArrow {
     left: 65px;
-    background-image: url(images/left.png); }
+    background-image: url(source/left.png); }
   #game .banner .rightArrow {
     right: 65px;
-    background-image: url(images/right.png); }
+    background-image: url(source/right.png); }

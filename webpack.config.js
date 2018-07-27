@@ -17,7 +17,7 @@ module.exports = {
         // 输出目录
         path: path.resolve(__dirname, 'dist'),
         //输出文件名
-        filename: `${outPath}js/[name].js`
+        filename: `${outPath}source/[name].js`
     },
     plugins: [
         //HTML文件的创建
@@ -30,7 +30,7 @@ module.exports = {
             inject: 'body'
         }),
         //生成目标css文件名
-        new ExtractTextPlugin(`${outPath}yys.css`),
+        new ExtractTextPlugin(`${outPath}source/yys.css`),
         //热加载名字
         new Webpack.NamedModulesPlugin(),
         //热加载模块
@@ -49,7 +49,7 @@ module.exports = {
             },
             // style中的url图片引入打包，制定存放路径和访问路径
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg|swf|ico)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -57,7 +57,7 @@ module.exports = {
                             //文件名
                             name: '[name].[ext]',
                             //存放路径
-                            outputPath: `${outPath}images/`
+                            outputPath: `${outPath}source/`
                         }
                     }
                 ]
@@ -67,28 +67,6 @@ module.exports = {
                 test: /\.(html)$/,
                 use: {
                     loader: 'html-loader'
-                }
-            },
-            // 打包视频，flash资源
-            {
-                test: /\.swf$/,
-                loader: 'url-loader',
-                options: {
-                    //限制文件大小
-                    limit: 1024,
-                    //文件名字
-                    name: `${outPath}flash/[name].[ext]`
-                }
-            },
-            // 打包ico
-            {
-                test: /\.ico$/,
-                loader: 'url-loader',
-                options: {
-                    //限制文件大小
-                    limit: 1024,
-                    //文件名字
-                    name: `${outPath}[name].[ext]`
                 }
             },
             //ES6转ES5，兼容IE
