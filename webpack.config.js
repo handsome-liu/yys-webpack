@@ -6,6 +6,7 @@ const { path, HtmlWebpackPlugin, ExtractTextPlugin, Webpack, outPath } = {
     outPath: '' //设置生成路径
 };
 
+//封装HtmlWebpackPlugin
 class Html {
     constructor(title = 'undefind', filename = 'index') {
         return new HtmlWebpackPlugin({
